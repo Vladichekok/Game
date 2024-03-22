@@ -19,7 +19,10 @@ public class PlayerVisual : MonoBehaviour
     {
         animator.SetBool(IS_RUNNING, Player.Instance.IsRunning());
         AdjustPLayerFacingDirection();
+    
     }
+
+   
 
 
 
