@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PRclass.unity
     guid: 864f35493c5dbaf4595f9e5c982719c8
+  - enabled: 1
+    path: Assets/Scenes/Outside.unity
+    guid: f64f5e9086c5bdc449afdc146c31e8b1
   m_configObjects: {}

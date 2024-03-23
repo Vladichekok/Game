@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+    Instance = this;
         rb = GetComponent<Rigidbody2D>();
     }
 
