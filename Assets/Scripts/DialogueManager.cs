@@ -16,7 +16,6 @@ public class DialogueManager : MonoBehaviour
     Actor[] currentActors;
     int activeMessage = 0;
     public static bool isActive = false;
-
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
         currentMessages = messages;
@@ -43,9 +42,9 @@ public class DialogueManager : MonoBehaviour
     public void NextMessage()
     {
         activeMessage++;
-        if (activeMessage < currentMessages.Length) 
-        { 
-        DisplayMessage();
+        if (activeMessage < currentMessages.Length)
+        {
+            DisplayMessage();
         }
         else
         {
@@ -68,7 +67,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isActive == true )
+        if (Input.GetKeyDown(KeyCode.Space) && isActive == true)
         {
             NextMessage();
         }
