@@ -9,9 +9,9 @@ using UnityEngine.UI;
 public class KeyPress : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public SceneSwitchTrigger sceneSwitchTrigger;
     public GameObject[] keys = new GameObject[26];
-    
+
     private Button[] keysButtons = new Button[26];
 
     private WordsGenerator _wordsGenerator = new WordsGenerator();
@@ -88,10 +88,10 @@ public class KeyPress : MonoBehaviour
         timeSlider.value = _timeLeft - Time.time;
         for (int x = 97; x <= 122; x++)
         {
-            if (Input.GetKeyDown(((char) x).ToString()))
+            if (Input.GetKeyDown(((char)x).ToString()))
             {
-                keysButtons[x-97].Select();
-                if (_currentWord.getChar() == (char) x)
+                keysButtons[x - 97].Select();
+                if (_currentWord.getChar() == (char)x)
                 {
                     _currentWord.removeChar();
                 }
@@ -118,7 +118,7 @@ public class KeyPress : MonoBehaviour
         _nextNextWord = _wordsGenerator.GetRandomWord();
 
         AddScore();
-        
+
         currentWord.text = _currentWord.word;
         nextWord.text = _nextWord.word;
         nextNextWord.text = _nextNextWord.word;
@@ -143,7 +143,7 @@ public class KeyPress : MonoBehaviour
         Time.timeScale = 0f;
         _gamePaused = true;
         pauseMenu.SetActive(true);
-        if(_gameOver) resume.text = "Restart";
+        if (_gameOver) resume.text = "Restart";
     }
 
     public void Resume()
@@ -162,7 +162,7 @@ public class KeyPress : MonoBehaviour
     private int calculateScore()
     {
         Debug.Log((_timeLeft - Time.time));
-        var x =  (int) ((_timeLeft - Time.time) * 100 * _multiplier);
+        var x = (int)((_timeLeft - Time.time) * 100 * _multiplier);
         Debug.Log(x);
         return x;
     }
@@ -181,6 +181,25 @@ public class KeyPress : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("Main Menu");
+        // Найдем кнопку "Main Menu" по тегу или по имени (в зависимости от вашего случая)
+        GameObject mainMenuButton = GameObject.FindGameObjectWithTag("MainMenuButton"); // Или используйте другой метод для поиска кнопки
+
+        if (mainMenuButton != null)
+        {
+            SceneSwitchTrigger sceneSwitchTrigger = mainMenuButton.GetComponent<SceneSwitchTrigger>(); // Получаем компонент SceneSwitchTrigger из кнопки
+            if (sceneSwitchTrigger != null)
+            {
+                sceneSwitchTrigger.SwitchScene(); // Загружаем сцену с помощью метода SwitchScene() из компонента SceneSwitchTrigger
+            }
+            else
+            {
+                Debug.LogWarning("SceneSwitchTrigger не присвоен к кнопке Main Menu.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Кнопка Main Menu не найдена.");
+        }
     }
 }
+
