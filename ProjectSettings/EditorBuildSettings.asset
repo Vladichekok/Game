@@ -26,4 +26,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outside.unity
     guid: f64f5e9086c5bdc449afdc146c31e8b1
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: bf5869ad2bb7fe34b9f8f125c9649a4f, type: 2}

@@ -1687,8 +1687,8 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 0}
-  m_FillRect: {fileID: 0}
-  m_HandleRect: {fileID: 0}
+  m_FillRect: {fileID: 1408282492}
+  m_HandleRect: {fileID: 651630600}
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
@@ -2035,13 +2035,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 403510545}
+        m_TargetAssemblyTypeName: KeyPress, Assembly-CSharp
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2229,7 +2229,8 @@ GameObject:
   m_Component:
   - component: {fileID: 403510544}
   - component: {fileID: 403510543}
-  - component: {fileID: 403510542}
+  - component: {fileID: 403510545}
+  - component: {fileID: 403510546}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2237,26 +2238,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &403510542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403510541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &403510543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2287,6 +2268,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &403510545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403510541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 346120a4dab9bb4448217ed75ef1082d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys:
+  - {fileID: 290318082}
+  - {fileID: 627343954}
+  - {fileID: 1088013346}
+  - {fileID: 489715551}
+  - {fileID: 1825045755}
+  - {fileID: 1722485463}
+  - {fileID: 180686762}
+  - {fileID: 1842110857}
+  - {fileID: 1235394881}
+  - {fileID: 2051364884}
+  - {fileID: 493959007}
+  - {fileID: 584078616}
+  - {fileID: 42072747}
+  - {fileID: 2076186976}
+  - {fileID: 184611410}
+  - {fileID: 889914277}
+  - {fileID: 2117293850}
+  - {fileID: 1483311671}
+  - {fileID: 1679986829}
+  - {fileID: 611135939}
+  - {fileID: 1802068339}
+  - {fileID: 47881793}
+  - {fileID: 1171289145}
+  - {fileID: 1001924128}
+  - {fileID: 1609490169}
+  - {fileID: 18280586}
+  currentWord: {fileID: 6493644}
+  nextWord: {fileID: 1419301270}
+  nextNextWord: {fileID: 202149612}
+  score: {fileID: 1224626462}
+  multiplier: {fileID: 345052840}
+  resume: {fileID: 1844340853}
+  errorSound: {fileID: 0}
+  pauseMenu: {fileID: 1038136984}
+  timeSlider: {fileID: 285171616}
+--- !u!114 &403510546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403510541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
 --- !u!1 &489715551
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,7 +3242,7 @@ RectTransform:
   m_Father: {fileID: 1260732049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3663,7 +3712,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877755240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3673,7 +3722,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -155.81, y: 66.2}
+  m_AnchoredPosition: {x: -155.80974, y: 66.20008}
   m_SizeDelta: {x: 135.8103, y: 41.48518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877755242
@@ -3957,7 +4006,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 918575305}
   m_OnClick:
     m_PersistentCalls:
@@ -5275,8 +5324,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60.3, y: -118.89}
-  m_SizeDelta: {x: 108.9993, y: 50}
+  m_AnchoredPosition: {x: 89.82, y: -118.89}
+  m_SizeDelta: {x: 168.03, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1224626462
 MonoBehaviour:
@@ -5776,7 +5825,7 @@ RectTransform:
   m_Father: {fileID: 1824851031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5852,7 +5901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.199997, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1419301270
@@ -7410,7 +7459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.63, y: 66.198}
+  m_AnchoredPosition: {x: -3.6, y: 66.198}
   m_SizeDelta: {x: 142.7336, y: 41.48019}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760603618
@@ -8245,13 +8294,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 403510545}
+        m_TargetAssemblyTypeName: KeyPress, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
